@@ -1,0 +1,57 @@
+@import "/src/styles/mixins.scss";
+
+.content {
+  display: flex;
+  justify-content: space-between;
+}
+
+.title {
+  @include textPageTitle;
+  margin-bottom: 20px;
+}
+
+.top {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 60px;
+
+}
+
+@mixin link {
+  position: absolute;
+  top: 4px;
+}
+
+.link {
+
+  &_main {
+    @include link;
+    left: 0;
+  }
+  &_cart {
+    @include link;
+    right: 0;
+
+  }
+}
+
+.add_button {
+  margin-top: -16px;
+}
+
+@media (max-width: 960px) {
+  .title {
+    margin-bottom: 10px;
+  }
+  .top {
+    margin-bottom: 20px;
+  }
+
+  .content {
+    flex-direction: column;
+  }
+}
+
+

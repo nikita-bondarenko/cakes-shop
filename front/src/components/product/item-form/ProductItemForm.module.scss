@@ -1,0 +1,152 @@
+@import "/src/styles/mixins.scss";
+@import "/src/styles/colors.scss";
+
+
+
+.form {
+  flex-grow: 2;
+  padding-left: 100px;
+  display: flex;
+  flex-direction: column;
+
+  &__item {
+    margin-bottom: 22px;
+    width: max-content;
+  }
+}
+
+
+
+.constructor {
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px;
+
+  .constructor__block {
+    width: 100%;
+  }
+
+  .constructor__bottom {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    transform: translateX(30px);
+  }
+}
+
+.submit_group {
+  margin-top: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: auto;
+  order: 1000;
+
+  &__counter {
+    margin-bottom: 20px;
+    margin-left: 20px;
+  }
+
+
+}
+
+.price {
+  display: flex;
+  align-items: center;
+margin-bottom: 25px;
+  &__title {
+    margin-right: 15px;
+    @include textSectionTitle;
+    font-weight: 500;
+  }
+
+  &__value {
+    transform: translateY(2px);
+    font-size: 24px;
+    color: $pink;
+  }
+}
+
+.properties {
+
+  &__item {
+    display: flex;
+    align-items: center;
+margin-bottom: 12px;
+  }
+
+  &__name {
+    margin-right: 15px;
+    @include textSectionTitle;
+    font-weight: 500;
+  }
+
+  &__value {
+    font-size: 24px;
+    color: $pink  ;
+  }
+}
+
+@media (max-width: 960px) {
+
+  .constructor {
+    .constructor__bottom {
+
+      justify-content: start;
+      transform: translateX(0px);
+    }
+
+  }
+
+  .form {
+    padding-left: 0px;
+  }
+
+  .submit_group {
+    margin-top: 20px;
+    justify-content: center;
+    align-items:center;
+    &__counter {
+      margin-left: 30px;
+      margin-bottom: 20px;
+      margin-right: 0px !important;
+    }
+  }
+
+  .properties {
+    &__item {
+      align-items: start;
+    }
+
+    &__value {
+      font-size: 18px;
+      line-height: 20px;
+      text-align: center;
+    }
+  }
+
+  .price {
+    &__value {
+      font-size: 18px;
+    }
+  }
+}
+
+@media (max-width: 400px) {
+
+  .submit_group {
+    margin-top: 0px;
+    flex-direction: column-reverse;
+    align-items:start;
+
+    &__counter {
+      margin-top: 10px;
+      margin-left: 0;
+      margin-bottom: 35px;
+      margin-right: 0px !important;
+    }
+  }
+
+
+}

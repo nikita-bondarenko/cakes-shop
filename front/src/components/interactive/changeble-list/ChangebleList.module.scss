@@ -1,0 +1,30 @@
+@import "/src/styles/mixins.scss";
+
+.body {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+}
+
+.list {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  li {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+.title {
+  @include textSectionTitle;
+  margin-bottom: 15px;
+}
+
+.button {
+margin-top: 20px;
+}
+

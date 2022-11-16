@@ -1,0 +1,56 @@
+@import '/src/styles/mixins.scss';
+@import '/src/styles/colors.scss';
+
+
+.loader {
+  @include textSmall;
+  position: relative;
+  height: 8px;
+  width: 58px;
+  margin: auto;
+
+  &__body {
+    display: flex;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  &__point {
+    display: block;
+    width: 8px;
+    height: 8px;
+    border-radius: 100%;
+    background: $gray;
+    animation: pulsPoint .8s infinite;
+  }
+
+  &__point:not(:last-child) {
+    margin-right: 2px;
+  }
+}
+
+.big {
+  height: 20px;
+  width: 104px;
+  margin-right: auto;
+  margin-left: auto;
+  .loader__point {
+    width: 20px;
+    height: 20px;
+  }
+
+  .loader__point:not(:last-child) {
+    margin-right: 8px;
+  }
+}
+
+@keyframes pulsPoint {
+  0%, 100% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 1;
+  }
+}

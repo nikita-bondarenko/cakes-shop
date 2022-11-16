@@ -1,0 +1,48 @@
+@import "/src/styles/colors.scss";
+
+.filter {
+  max-width: 250px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-right: 30px;
+  position: relative;
+}
+
+.button {
+  margin-top: 30px;
+}
+
+.buttons {
+    display: flex;
+  flex-direction: column;
+}
+
+@media (max-width: 960px) {
+  .filter {
+    max-width: none;
+    width: 100%;
+    padding-right: 0px;
+    align-items: stretch;
+    margin-bottom: 25px;
+  }
+
+  .buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-right: -15px;
+    margin-left: -15px;
+  }
+
+  .button {
+    margin-top: 5px;
+  }
+}
+
+@media (max-width: 960px) {
+  .error {
+    margin-bottom: -10px;
+  }
+}
+

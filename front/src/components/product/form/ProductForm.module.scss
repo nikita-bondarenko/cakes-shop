@@ -1,0 +1,21 @@
+@import "/src/styles/mixins.scss";
+
+.title {
+  @include textPageTitle;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.body {
+  display: block;
+  text-align: center;
+}
+
+.submit {
+  margin-top: 50px;
+  margin-bottom: 15px;
+}
+
+.loader {
+margin-top: 10px;
+}

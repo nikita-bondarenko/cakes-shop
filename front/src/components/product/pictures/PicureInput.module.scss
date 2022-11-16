@@ -1,0 +1,9 @@
+@import "/src/styles/mixins.scss";
+
+.body {
+  @include column;
+}
+
+.radio {
+  margin-top: -17px;
+}

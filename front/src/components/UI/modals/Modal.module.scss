@@ -1,0 +1,171 @@
+@import '/src/styles/colors.scss';
+@import "/src/styles/mixins.scss";
+@import "/src/styles/keyframes.scss";
+
+.modal {
+  z-index: 100;
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  width: 100vw;
+  background: transparent;
+  overflow: hidden;
+}
+
+.modal__body {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    animation: appear .4s ease-in-out ;
+}
+
+@mixin center {
+  position: absolute;
+  transform: translate(50%, -50%);
+}
+
+@mixin shadowSize {
+  width: 200vw;
+  height: 200vw;
+}
+
+@mixin initSize {
+  width: 0;
+  height: 0;
+}
+
+.shadow {
+  @include center;
+  @include shadowSize;
+  background: rgba(black, .5);
+  animation-name: shadowOpen;
+  animation-timing-function: ease-in-out;
+  transition: background 1s ease-in-out;
+
+  &:hover {
+    background: rgba(black, .58);
+  }
+
+  &__closing {
+    @include center;
+    @include initSize;
+    animation-name: shadowClose;
+    animation-duration: 1s !important;
+
+    animation-timing-function: ease-in-out;
+    background: rgba(black, .5);
+
+  }
+}
+
+
+@keyframes shadowClose {
+  from {
+    @include shadowSize;
+    border-radius: 0;
+    right: 50vw;
+    top: 50vh;
+  }
+  to {
+    @include initSize;
+    border-radius: 100%;
+    right: 110vw;
+    top: 110vh;
+  }
+}
+
+@keyframes shadowOpen {
+  from {
+    right: -10vw;
+    top: -10vh;
+    @include initSize;
+    border-radius: 100%;
+  }
+
+  to {
+    right: 50vw;
+    top: 50vh;
+    @include shadowSize;
+  }
+}
+
+@mixin landSize {
+  width: 450px;
+  height: 450px;
+}
+
+@mixin land {
+  @include center;
+  border-radius: 100%;
+  animation-timing-function: ease-in-out;
+  background: white;
+  display: block;
+
+}
+
+.land {
+  @include landSize;
+  animation-name: landOpen;
+  animation-duration: .8s !important;
+  @include land;
+  padding: 100px;
+
+
+
+  &__closing {
+    @include initSize;
+    animation-name: landClose;
+    @include land;
+
+  }
+}
+
+@keyframes landOpen {
+
+  0% {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+
+  50% {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+
+
+  100% {
+    @include landSize;
+
+  }
+}
+
+@keyframes landClose {
+  0% {
+    padding-top: 70px;
+
+    @include landSize;
+  }
+
+  50% {
+    padding-top: 0px;
+
+    @include initSize;
+  }
+
+  100% {
+    padding-top: 0px;
+
+    @include initSize
+  }
+}
+
+
+
+
+
+
+

@@ -1,0 +1,18 @@
+@import '/src/styles/colors.scss';
+@import '/src/styles/mixins.scss';
+
+.body {
+  display: flex;
+  align-items: center;
+
+}
+
+.label {
+  @include textSmall;
+  margin-left: 10px;
+  transition: color .3s ease-in-out;
+}
+
+.checked {
+  color: $pink;
+}

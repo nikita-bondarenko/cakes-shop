@@ -1,0 +1,43 @@
+.top {
+  display: flex;
+  justify-content: space-between;
+}
+
+.top__flexible {
+  align-items: start;
+}
+
+.chat {
+  padding-top: 120px;
+}
+
+.change_button {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+ bottom: -35px;
+}
+
+.link_catalog {
+  position: absolute;
+  left: 0;
+  top: 5px;
+}
+
+.link_cart {
+  position: absolute;
+  right: 0;
+  top: 5px;
+}
+
+@media (max-width: 960px) {
+  .top {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .chat {
+    padding-top: 40px;
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "name": "gbakers",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "concurrently": "^7.5.0"
+  },
+  "scripts": {
+    "server": "npm run start:dev --prefix server",
+    "client": "npm run start --prefix front",
+    "start:db": "docker-compose up -d",
+    "start": "concurrently \"yarn server\" \"yarn client\"",
+    "preinstall": "yarn --cwd \"server\" install",
+    "postinstall": "yarn --cwd \"front\" install"
+  }
+}

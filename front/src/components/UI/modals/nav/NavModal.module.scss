@@ -1,0 +1,46 @@
+@import "/src/styles/mixins.scss";
+
+.list {
+  display: block;
+  text-align: center;
+margin-top: -25px;
+}
+
+.button {
+  @include textSectionTitle;
+  margin-bottom: 10px;
+}
+
+.item {
+  animation-name:appear ;
+  animation-timing-function: ease-in-out;
+  animation-duration: .5s;
+
+  &__closing {
+    animation-name: itemClose;
+    animation-duration: .5s;
+  }
+}
+
+@keyframes itemClose {
+
+}
+
+@keyframes appear {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.cancel {
+  margin-top: 10px;
+  @include textCommon;
+  font-weight: 500;
+}
+
+@media (max-width: 960px) {
+}

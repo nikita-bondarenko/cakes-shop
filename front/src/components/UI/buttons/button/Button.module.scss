@@ -1,0 +1,60 @@
+@import '/src/styles/colors.scss';
+
+@mixin hover {
+  overflow: hidden;
+  &::after {
+    border-radius: 100%;
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 300px;
+    height: 300px;
+    background: rgba($pink, .3);
+    opacity: 0;
+    transform: translate(-50%, -50%);
+    animation: wave .8s ease-in-out;
+  }
+}
+
+.hover {
+  @include hover;
+
+}
+
+.hover_blue {
+  @include hover;
+
+  &::after {
+    background: rgba($blue, .3);
+  }
+}
+
+.button {
+  padding: 5px 10px;
+  position: relative;
+  border-radius: 12px;
+  border: none;
+
+}
+
+
+@keyframes wave {
+  from {
+    opacity: 1;
+    width: 0px;
+    height: 0px;
+  }
+  to {
+    opacity: 0;
+    width: 300px;
+    height: 300px;
+  }
+
+}
+
+@media (max-width: 960px) {
+.button {
+  padding: 10px 15px;
+}
+}

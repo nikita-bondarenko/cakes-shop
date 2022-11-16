@@ -1,0 +1,8 @@
+<h1>У вас новый заказ от {{email}}</h1>
+<h2>Детали заказа:</h2>
+{{#list cart.productsInCart}}
+{{/list}}
+{{#comment description}}{{/comment}}
+{{#address address}}{{/address}}
+<h2>Полная стоимость заказа: {{price}}р.</h2>
+<h2>Общее колличество товаров: {{#quantity cart.productsInCart}}{{/quantity}}</h2>

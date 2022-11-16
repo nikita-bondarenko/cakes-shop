@@ -1,0 +1,14 @@
+@import "/src/styles/mixins.scss";
+
+.body {
+  display: flex;
+  flex-direction: column;
+}
+
+.text {
+  text-align: center;
+}
+
+.password {
+  margin-top: -20px;
+}

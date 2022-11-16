@@ -1,0 +1,11 @@
+@import "/src/styles/mixins.scss";
+
+.modal {
+  height: 100%;
+  @include column;
+  justify-content: space-between;
+}
+
+.bottom {
+  @include column;
+}

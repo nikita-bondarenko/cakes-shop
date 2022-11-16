@@ -1,0 +1,27 @@
+@import "/src/styles/mixins.scss";
+@import "/src/styles/keyframes.scss";
+
+.modal {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  animation: appear .4s ease-in-out ;
+}
+
+.text {
+  @include textSectionTitle;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.button {
+  margin-bottom: 20px;
+}
+
+@media (max-width: 960px) {
+  .text {
+    margin-bottom: 60px;
+  }
+}

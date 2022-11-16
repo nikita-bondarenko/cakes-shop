@@ -1,0 +1,42 @@
+@import "./src/styles/App.scss";
+
+.logo {
+  @include flexLine;
+  align-items: flex-end;
+}
+
+.image {
+  max-width: 92px;
+  margin-right: 11px
+;
+}
+
+.text {
+
+  color: white;
+  font-family: "Poison Love";
+  font-size: 35px;
+  line-height: 1.2;
+  padding-bottom: 1px;
+}
+
+@media (max-width: 960px) {
+
+  .logo {
+
+  }
+
+  .image {
+    max-width: 50px;
+    margin-right: 16px;
+  }
+
+  .text {
+flex-grow: 1;
+    color: white;
+    font-family: "Poison Love";
+    font-size: 20px;
+    line-height: 1.2;
+    padding-bottom: 1px;
+  }
+}

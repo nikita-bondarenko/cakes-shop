@@ -1,0 +1,47 @@
+@import "/src/styles/mixins.scss";
+@import "/src/styles/colors.scss";
+
+.price {
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  margin: 60px auto 30px;
+  overflow: hidden;
+
+  .text {
+    @include textSectionTitle;
+    background: $pink;
+    color: white;
+    padding: 6px 10px;
+    text-transform: uppercase;
+  }
+
+  .value {
+    padding: 6px;
+    background: white;
+    color: $pink;
+    @include textSectionTitle;
+    font-weight: 500;
+  }
+}
+
+.mock {
+  text-align: center;
+}
+
+@media (max-width: 960px) {
+  .body {
+    margin-top: -15px;
+  }
+
+  .list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: start;
+    align-items: stretch;
+    gap: 15px;
+  }
+
+}
+
+

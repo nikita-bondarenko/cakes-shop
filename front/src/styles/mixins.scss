@@ -1,0 +1,57 @@
+@import "./colors.scss";
+
+@mixin flexLine {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+@mixin textCommon {
+  font-family: "Proxima Soft";
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 20px;
+  color: $gray;
+  @media (max-width: 960px) {
+    font-size: 14px;
+    line-height: 16px;
+  }
+}
+
+@mixin textSmall {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+}
+
+@mixin textSectionTitle {
+  font-weight: 400;
+  font-size: 28px;
+  line-height: 32px;
+  @media (max-width: 960px) {
+    font-size: 20px;
+    line-height: 22px;
+  }
+}
+
+@mixin textPageTitle {
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 36px;
+  @media (max-width: 960px) {
+    font-size: 24px;
+    line-height: 32px;
+  }
+}
+
+@mixin column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+@mixin title {
+  @include textPageTitle;
+  margin-bottom: 50px;
+  text-align: center;
+}

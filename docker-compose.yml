@@ -1,0 +1,22 @@
+version: '3.0'
+
+services:
+  postgres:
+    container_name: postgres1
+    image: postgres:latest
+    env_file:
+      - server/.development.env
+    environment:
+      PG_DATA: /var/lib/postgresql/data
+      POSTGRES_PASSWORD: 'jayajagadisha'
+      POSTGRES_USER: 'narada'
+      POSTGRES_DB: 'cakes'
+    ports:
+      - 5432:5432
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    restart: always
+
+volumes:
+  pgdata:
+

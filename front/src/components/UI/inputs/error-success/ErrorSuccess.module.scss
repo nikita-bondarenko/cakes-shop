@@ -1,0 +1,74 @@
+@import '/src/styles/mixins.scss';
+@import '/src/styles/colors.scss';
+@import '/src/styles/keyframes.scss';
+
+.error {
+  @include textSmall;
+  color: $gray;
+  animation: appear .4s ease-in-out;
+}
+
+.success {
+  @include textSmall;
+  opacity: 0;
+  color: transparent;
+  animation: once 3s ease-in-out;
+}
+
+.blue {
+  animation: onceBlue 5s ease-in-out;
+}
+
+.sign {
+  position: absolute;
+  left: 50%;
+  bottom: 0px;
+  transform: translateX(-50%);
+white-space: nowrap;
+}
+
+
+.body {
+  position: relative;
+  padding: 0 0px 20px 0px;
+}
+
+
+.loader {
+  margin: auto;
+  margin-bottom: 3px;
+}
+
+
+@keyframes once {
+  0%{
+    opacity: 0;
+    color: $pink;
+
+  }
+  50% {
+    opacity: 1;
+    color: $pink;
+
+  }
+
+  100% {
+    opacity: 0;
+    color: $pink;
+  }
+}
+
+@keyframes onceBlue {
+  0%, 100% {
+    opacity: 0;
+    color: $blue;
+
+  }
+  50% {
+    opacity: 1;
+    color: $blue;
+
+  }
+}
+
+

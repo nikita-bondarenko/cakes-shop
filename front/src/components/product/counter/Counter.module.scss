@@ -1,0 +1,41 @@
+@import '/src/styles/colors.scss';
+
+.counter {
+  display: flex;
+  align-items: stretch;
+  overflow: hidden;
+  border-radius: 12px;
+  background: white;
+  margin-right: auto;
+  height: 40px;
+
+  &__button {
+    font-size: 24px;
+    font-weight: 500;
+    width: 40px;
+
+  }
+
+  &__minus {
+    padding-bottom: 8px;
+  }
+
+
+  &__display {
+    white-space: nowrap;
+    font-size: 24px;
+    font-weight: 500;
+    color: $pink;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+  }
+}
+
+@media (max-width: 960px) {
+  .counter {
+    margin-right: 0;
+  }
+}
+

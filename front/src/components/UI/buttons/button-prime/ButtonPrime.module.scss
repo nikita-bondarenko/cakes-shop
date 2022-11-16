@@ -1,0 +1,37 @@
+@import "/src/styles/colors.scss";
+@import "/src/styles/mixins.scss";
+.body {
+  position: relative;
+  padding-bottom: 20px;
+}
+
+.loading {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 6px;
+}
+
+.button {
+  padding: 10px 15px;
+  background: $pink;
+  color: white;
+  font-size: 24px;
+margin: auto;
+  text-transform: uppercase;
+
+}
+
+.disabled {
+  pointer-events: none;
+  background: rgba($pink, .7);
+
+}
+
+@media (max-width: 960px) {
+  .button {
+    width: 100%;
+    padding: 12px 15px;
+    font-size: 18px;
+  }
+}

@@ -1,0 +1,32 @@
+@import "./src/styles/App.scss";
+
+.header {
+  background: $pink;
+  height: 120px;
+  transition: background .6s ease-in-out;
+}
+
+.body {
+  height: 100%;
+  margin-right: -10px;
+  margin-left: -10px;
+ @include flexLine
+}
+
+.menu {
+  width: 60px;
+}
+
+@media (max-width: 960px) {
+  .header {
+    height: 70px;
+  }
+
+  .menu {
+    width: 52px;
+  }
+
+  .logo {
+    flex-grow: 1;
+  }
+}

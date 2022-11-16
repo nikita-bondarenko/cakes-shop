@@ -1,0 +1,1 @@
+export const saveState = (key: string, state: any) => localStorage.setItem(key, JSON.stringify(state))
